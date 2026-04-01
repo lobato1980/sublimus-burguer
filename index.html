@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js/app.js" defer></script>
+    <title>Sublimus delivery</title>
+</head>
+<body>
+
+<!-- HEADER só aparece no desktop -->
+<header>
+    <h1><img src="img/logo3.png" alt="logosublimus"></h1>
+    <nav class="desktop-nav">
+        <button type="button" class="nav-btn" id="btn-inicio">Início</button>
+        <button type="button" class="nav-btn" id="btn-cardapio">Cardápio</button>
+        <button type="button" id="btn-carrinho" class="nav-btn">
+            Carrinho <span id="contador">0</span>
+        </button>
+        <button type="button" class="nav-btn" id="btn-contato">Contato</button>
+    </nav>
+</header>
+
+<!-- HEADER MOBILE só aparece no mobile (só logo) -->
+<header class="header-mobile">
+    <h1><img src="img/logo3.png" alt="logosublimus"></h1>
+</header>
+
+<section class="banner">
+    <img src="img/SUBLIMUS.png" alt="banner">
+    <div class="banner-text">
+        <h1>PRA MATAR <br><span class="suafome">SUA FOME!</span></h1>
+        <p>Nada supera o sabor sublime de um hambúrguer feito com carinho e ingredientes selecionados. No Sublimus, cada mordida revela o verdadeiro significado de um hambúrguer artesanal de respeito.</p>
+        <div class="destaque-carne"><span>Burguer Sublimus</span></div>
+        <div class="preco-banner">
+            <span class="cifrao">R$</span>
+            <span class="valor">28</span>
+            <span class="centavos">,90</span>
+        </div>
+    </div>
+</section>
+
+<main class="conteudo-principal">
+    <div class="categorias-container">
+        <button class="categoria-item" data-categoria="todos">
+            <img src="img/duascarnes.png" alt="todos"><span>Todos</span>
+        </button>
+        <button class="categoria-item" data-categoria="duas-carnes">
+            <img src="img/duascarnes.png" alt="duas carnes"><span>Duas carnes</span>
+        </button>
+        <button class="categoria-item" data-categoria="frango">
+            <img src="img/frangocatg.png" alt="frango"><span>Burguers de Frango</span>
+        </button>
+        <button class="categoria-item" data-categoria="combo">
+            <img src="img/comboctg.png" alt="combo"><span>Combo Sublimus</span>
+        </button>
+        <button class="categoria-item" data-categoria="bebidas">
+            <img src="img/fanta2_0.png" alt="bebidas"><span>Bebidas</span>
+        </button>
+    </div>
+
+    <div class="chamada-vitrine">
+        <h2>Os mais pedidos!</h2>
+    </div>
+
+    <section class="vitrine" id="vitrine">
+        <div class="card" data-categoria="duas-carnes">
+            <img src="img/duascarnes.png" class="img-produto" alt="burguer">
+            <div class="info-produto">
+                <h4>Double Especial</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$28,00</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-categoria="duas-carnes">
+            <img src="img/classico.png" class="img-produto" alt="burguer">
+            <div class="info-produto">
+                <h4>Burguer Classic</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$32,00</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-categoria="duas-carnes">
+            <img src="img/WhatsApp Image (1).png" class="img-produto" alt="burguer">
+            <div class="info-produto">
+                <h4>Big Double</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$34,00</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-categoria="duas-carnes">
+            <img src="img/Bannerdefinitivosemfundo.png" class="img-produto" alt="burguer">
+            <div class="info-produto">
+                <h4>Burguer Sublimus</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$28,90</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-categoria="frango">
+            <img src="img/frangocatg.png" class="img-produto" alt="frango">
+            <div class="info-produto">
+                <h4>Burguer Chicken</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$26,00</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-categoria="combo">
+            <img src="img/comboctg.png" class="img-produto" alt="combo">
+            <div class="info-produto">
+                <h4>Combo Sublimus</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$39,00</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" data-categoria="bebidas">
+            <img src="img/fanta2_0.png" class="img-produto" alt="bebida">
+            <div class="info-produto">
+                <h4>Fanta Lata</h4>
+                <div class="preco-linha">
+                    <span class="preco">R$8,00</span>
+                    <button class="btn-add">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<section id="carrinho" class="carrinho">
+    <h2>Seu Pedido</h2>
+    <ul id="lista-carrinho"></ul>
+    <div class="resumo">
+        <p>Total: R$ <span id="total">0.00</span></p>
+    </div>
+    <button id="finalizar">Finalizar Pedido</button>
+</section>
+
+<!-- TAB BAR MOBILE -->
+<nav class="tab-bar">
+    <button class="tab-btn" id="tab-inicio">
+        <i class="fa-solid fa-house"></i>
+        <span>Início</span>
+    </button>
+    <button class="tab-btn" id="tab-cardapio">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Cardápio</span>
+    </button>
+    <button class="tab-btn" id="tab-carrinho">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span>Carrinho</span>
+        <span id="contador-mobile">0</span>
+    </button>
+    <button class="tab-btn" id="tab-contato">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Contato</span>
+    </button>
+</nav>
+
+<div id="toast">Adicionado ao carrinho</div>
+
+</body>
+</html>
