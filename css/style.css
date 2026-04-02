@@ -267,6 +267,8 @@ header {
     content: '';
     display: block;
     width: 60px;
+    position: relative;
+    left: 100px;
     height: 3px;
     background-color: #270d04;
     margin-top: 6px;
