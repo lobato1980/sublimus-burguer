@@ -121,6 +121,7 @@ header {
     height: 55vh;
     overflow: hidden;
     position: relative;
+    height: 300px;
 }
 
 .banner img {
@@ -146,6 +147,7 @@ header {
     line-height: 0.95;
     margin-bottom: 10px;
     text-transform: uppercase;
+
 }
 
 .suafome {
@@ -166,6 +168,7 @@ header {
     width: fit-content;
     border-radius: 10px;
     margin-bottom: 6px;
+    
 }
 
 .preco-banner {
@@ -368,7 +371,7 @@ h2 {
     position: fixed;
     right: -75%;
     top: 0;
-    width: 50%;
+    width: 65%;
     height: 100vh;
     background: #ffffff;
     box-shadow: -5px 0 20px rgba(0,0,0,0.2);
