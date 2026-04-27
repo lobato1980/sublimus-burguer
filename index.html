@@ -12,172 +12,220 @@
 </head>
 <body>
 
-<!-- HEADER só aparece no desktop -->
-<header>
-    <h1><img src="img/logo3.png" alt="logosublimus"></h1>
-    <nav class="desktop-nav">
-        <button type="button" class="nav-btn" id="btn-inicio">Início</button>
-        <button type="button" class="nav-btn" id="btn-cardapio">Cardápio</button>
-        <button type="button" id="btn-carrinho" class="nav-btn">
-            Carrinho <span id="contador">0</span>
-        </button>
-        <button type="button" class="nav-btn" id="btn-contato">Contato</button>
-    </nav>
-</header>
 
-<!-- HEADER MOBILE só aparece no mobile (só logo) -->
 <header class="header-mobile">
-    <h1><img src="img/logo3.png" alt="logosublimus"></h1>
+    <h1><i class="fa-solid fa-fire-flame-curved logo-fogo"></i></h1>
+   <span class="span-burguer">SUBLIMUS </span>
+   <button id="btn-menu">
+    <div class="traco"></div>
+    <div class="traco"></div>
+    <div class="traco"></div>
+   </button>
 </header>
 
-<section class="banner">
-    <img src="img/SUBLIMUS.png" alt="banner">
-    <div class="banner-text">
-        <h1>PRA MATAR <br><span class="suafome">SUA FOME!</span></h1>
-        <p>Nada supera o sabor sublime de um hambúrguer feito com carinho e ingredientes selecionados. No Sublimus, cada mordida revela o verdadeiro significado de um hambúrguer artesanal de respeito.</p>
-        <div class="destaque-carne"><span>Burguer Sublimus</span></div>
-        <div class="preco-banner">
-            <span class="cifrao">R$</span>
-            <span class="valor">28</span>
-            <span class="centavos">,90</span>
-        </div>
+ <div class="gaveta" id="gaveta">
+  <button id="btn-fechar">x</button>
+  <nav>
+    <a href="#cardapio"><i class="fa-solid fa-burger"></i>Cardápio</a>
+    <a href="https://wa.me/55929999999999" target="_blank"><i class="fa-brands fa-whatsapp"></i>Contato</a>
+    <a href="#" id="link-carrinho"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a>
+  </nav>
+ </div>
+ <div class="overlay" id="overlay"></div>
+ <div class="carrinho-drawer" id="carrinho-drawer">
+  <div class="carrinho-header">
+    <h2 class="seu-carrinho">Seu Carrinho</h2>
+    <button id="btn-fechar-carrinho">x</button>
+  </div>
+  <div class="carrinho-itens" id="carrinho-itens"></div>
+  <div class="carrinho-footer">
+    <p class="total-drawer">Total: <span id="total-carrinho">R$0</span></p>
+    <a href="https://wa.me/55929999999999999" target="_blank" class="btn-finalizar">Finalizar pedido</a>
+  </div>
+ </div>
+
+
+ <!--DESKTOP-->
+    <section class="banner-desktop-section">
+      <img src="img/ft2-seisburguers.png" class="banner-desktop" alt="banner desktop">
+    <div class="text-banner-desktop"><h1 class="titulo-banner">QUANDO O SABOR É <span class="destaque"> SUBLIMUS</span>, A ESCOLHA FICA FÁCIL
+     <i class="fa-solid fa-fire-flame-curved logo-fogo-banner"></i>
+    </h1>
     </div>
 </section>
 
-<main class="conteudo-principal">
-    <div class="categorias-container">
-        <button class="categoria-item" data-categoria="todos">
-            <img src="img/duascarnes.png" alt="todos"><span>Todos</span>
-        </button>
-        <button class="categoria-item" data-categoria="duas-carnes">
-            <img src="img/duascarnes.png" alt="duas carnes"><span>Duas carnes</span>
-        </button>
-        <button class="categoria-item" data-categoria="frango">
-            <img src="img/frangocatg.png" alt="frango"><span>Burguers de Frango</span>
-        </button>
-        <button class="categoria-item" data-categoria="combo">
-            <img src="img/comboctg.png" alt="combo"><span>Combo Sublimus</span>
-        </button>
-        <button class="categoria-item" data-categoria="bebidas">
-            <img src="img/fanta2_0.png" alt="bebidas"><span>Bebidas</span>
-        </button>
+
+
+   <section class="favoritos" id="cardapio">
+    <div class="container"> 
+    <div class="favoritos-header">
+    <div class="section-header">
+    <span class="line"></span>
+    <p class="subtitle">NOSSO MENU</p></div>
+    <h2 class="title">OS FAVORITOS DA CASA</h2>
     </div>
 
-    <div class="chamada-vitrine">
-        <h2>Os mais pedidos!</h2>
+    <div class="favoritos-grid">
+        <div class="product-card">
+        <div class="product-image">
+        <img src="img/1.png" alt="sublimus-bacon">
+        <button class="btn-adicionar" data-id="1" data-nome="SUBLIMUS BACON" data-preco="36">+</button>
+        </div>
+        <div class="product-info"> 
+        <div class="product-name-price">
+        <h3 class="product-title">SUBLIMUS BACON</h3>
+        <p class="product-price">R$ 36</p></div>
+        <p class="product-description">Pão brioche, carne smash, queijo derretido, bacon crocante e molho especial.</p>
+        </div></div>
+         <div class="product-card">
+        <div class="product-image">
+        <img src="img/stacksublimus.png" alt="stack-sublimus">
+          <button class="btn-adicionar" data-id="2" data-nome="STACK SUBLIMUS" data-preco="48">+</button>
+        </div>
+        <div class="product-info">
+        <div class="product-name-price">
+        <h3 class="product-title">STACK SUBLIMUS</h3>
+        <p class="product-price">R$ 48</p></div>
+        <p class="product-description">Pão brioche, quatro blends de carne bovina grelhada, múltiplas fatias de queijo cheddar, bacon crocante e molho especial da casa.</p>
+        </div> </div>
+
+        <div class="product-card">
+        <div class="product-image">
+        <img src="img/2.png" alt="cowboy-bbq">
+          <button class="btn-adicionar" data-id="3" data-nome="COWBOY-BBQ" data-preco="40">+</button>
+        </div>
+        <div class="product-info">
+        <div class="product-name-price">
+        <h3 class="product-title">Cowboy BBQ</h3>
+        <p class="product-price">R$ 40</p></div>
+        <p class="product-description">Pão brioche, blend bovino grelhado, generosa porção de carne desfiada, queijo derretido, anéis de cebola crocantes e molho barbecue.</p> 
+        </div> </div>
+        <div class="product-card">
+        <div class="product-image">
+        <img src="img/3.png" alt="onion-classic">
+           <button class="btn-adicionar" data-id="4" data-nome="ONION CLASSIC" data-preco="25">+</button>
+        </div>
+        <div class="product-info">
+        <div class="product-name-price">
+        <h3 class="product-title">ONION CLASSIC</h3>
+        <p class="product-price">R$ 25</p></div>
+        <p class="product-description">Pão brioche, suculento blend bovino grelhado, queijo prato derretido, camada generosa de cebola caramelizada e maionose artesanal.</p> 
+        </div>
+    </div>
+</div>
+</div>
+   </section>
+
+<section class="quem-somos">
+  <div class="quem-somos-texto">
+    <div class="section-header">
+    <span class="line"></span>
+    <span class="section-title">Quem somos</span>
     </div>
 
-    <section class="vitrine" id="vitrine">
-        <div class="card" data-categoria="duas-carnes">
-            <img src="img/duascarnes.png" class="img-produto" alt="burguer">
-            <div class="info-produto">
-                <h4>Double Especial</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$28,00</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
-        </div>
+    <h2 class="headline">
+        Feito com <em>obsessão</em>,<br>
+        servido com orgulho
+    </h2>
 
-        <div class="card" data-categoria="todos">
-            <img src="img/classico.png" class="img-produto" alt="burguer">
-            <div class="info-produto">
-                <h4>Burguer Classic</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$32,00</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
-        </div>
+    <p class="intro-text">
+        A Sublimus nasceu de uma ideia simples: fazer o hambúrguer que a gente sempre quis comer. Sem atalhos, sem congelados, sem frescura - só carne selecionada, pão artesanal e combinações que a gente leva a sério de verdade, porque acreditamos que comida boa merece respeito. Esse é o compromisso Sublimus - <strong class="text-quem-somos">toda vez, sem exceção.</strong>
+    </p></div>
 
-        <div class="card" data-categoria="duas-carnes">
-            <img src="img/WhatsApp Image (1).png" class="img-produto" alt="burguer">
-            <div class="info-produto">
-                <h4>Big Double</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$34,00</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
-        </div>
+     <div class="photo-area">
 
-        <div class="card" data-categoria="todos">
-            <img src="img/Bannerdefinitivosemfundo.png" class="img-produto" alt="burguer">
-            <div class="info-produto">
-                <h4>Burguer Sublimus</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$28,90</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
-        </div>
+    <div class="section-header loja-header">
+    <span class="line"></span>
+        <span class="loja-sub">Conheça nossa loja</span></div>
+    
+      <div class="photo-block">
+        <img src="img/photofinal.jpeg" alt="burger-black">
 
-        <div class="card" data-categoria="frango">
-            <img src="img/frangocatg.png" class="img-produto" alt="frango">
-            <div class="info-produto">
-                <h4>Burguer Chicken</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$26,00</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
+        <div class="overlay-bottom">
+        <h3>Um espaço feito<br>pra você <em>ficar.</em></h3>
         </div>
-
-        <div class="card" data-categoria="combo">
-            <img src="img/comboctg.png" class="img-produto" alt="combo">
-            <div class="info-produto">
-                <h4>Combo Sublimus</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$39,00</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" data-categoria="bebidas">
-            <img src="img/fanta2_0.png" class="img-produto" alt="bebida">
-            <div class="info-produto">
-                <h4>Fanta Lata</h4>
-                <div class="preco-linha">
-                    <span class="preco">R$8,00</span>
-                    <button class="btn-add">+</button>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<section id="carrinho" class="carrinho">
-    <h2>Seu Pedido</h2>
-    <ul id="lista-carrinho"></ul>
-    <div class="resumo">
-        <p>Total: R$ <span id="total">0.00</span></p>
-    </div>
-    <button id="finalizar">Finalizar Pedido</button>
+    </div></div>
 </section>
+<div class="spacer-v"></div>
 
-<!-- TAB BAR MOBILE -->
-<nav class="tab-bar">
-    <button class="tab-btn" id="tab-inicio">
-        <i class="fa-solid fa-house"></i>
-        <span>Início</span>
-    </button>
-    <button class="tab-btn" id="tab-cardapio">
-        <i class="fa-solid fa-utensils"></i>
-        <span>Cardápio</span>
-    </button>
-    <button class="tab-btn" id="tab-carrinho">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span>Carrinho</span>
-        <span id="contador-mobile">0</span>
-    </button>
-    <button class="tab-btn" id="tab-contato">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>Contato</span>
-    </button>
-</nav>
+<section class="footer-wrapper">
+<div class="info-grid">
 
-<div id="toast">Adicionado ao carrinho</div>
+  <!-- Endereço -->
+  <div class="info-card">
+    <div class="card-label">Onde estamos</div>
+    <address>
+      <strong>Sublimus Hamburgeria</strong>
+      Rua das Flores, 142 – Centro<br>
+      Manaus – Am, 01310-000<br><br>
+      <a href="https://maps.google.com" target="_blank"
+        style="color: var(--gold); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; font-weight: 500;">
+        Ver no mapa →
+      </a>
+    </address>
+  </div>
+
+  <!-- Horários -->
+  <div class="info-card">
+    <div class="card-label">Horários</div>
+    <p>
+      <strong>Seg – Sex</strong>
+      11h30 às 23h00
+    </p>
+    <p style="margin-top: 16px;">
+      <strong>Sáb – Dom</strong>
+      11h00 às 00h00
+    </p>
+    <p style="margin-top: 16px; font-size: 13px; color: #666;">
+      Feriados: consulte nossas redes
+    </p>
+  </div>
+
+  <!-- Redes Sociais -->
+  <div class="info-card">
+    <div class="card-label">Redes Sociais</div>
+    <div class="social-links">
+
+      <a href="https://instagram.com/subli_mus" target="_blank">
+        <div class="icon">
+          <!-- Instagram icon -->
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        @sublimus
+      </a>
+
+      <a href="https://tiktok.com/@sublimus" target="_blank">
+        <div class="icon">
+          <!-- TikTok icon -->
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+        @sublimus
+      </a>
+
+      <a href="https://wa.me/5511999999999" target="_blank">
+        <div class="icon">
+          <!-- WhatsApp icon -->
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        (11) 99999-9999
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer bar -->
+<div class="footer-bar">
+  <div class="logo">SUBLIMUS</div>
+  <p>© 2025 Sublimus Burguer — Todos os direitos reservados</p>
+</div>
+</section>
+<div class="carrinho-flutuante" id="carrinho-flutuante">
+  <button class="btn-flutuante">
+    <span id="contador-flutuante">0</span>
+     <i class="fa-solid fa-cart-shopping"></i>
+  </button>
+</div>
 
 </body>
 </html>
