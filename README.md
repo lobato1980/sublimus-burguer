@@ -6,6 +6,8 @@
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+<img src ="/img/thumb.PNG" width ="300" alt = "Preview Mobile">
+
 ## Acesse o projeto
 
 **[sublimus.vercel.app](https://sublimus-burguer.vercel.app/)** 
